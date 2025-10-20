@@ -14,11 +14,14 @@ export default function TeamPage() {
       <h1 className="text-4xl font-bold mb-8">Our Team</h1>
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <p className="leading-relaxed text-lg italic">
+          &quot;The Team, The Team, The Team.&quot; - Bo Schembechler
         </p>
         <p className="leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          The legendary Michigan football coach Bo Schembechler said it best when he said, &quot;The Team, The Team, The Team.&quot; These words are written on the bannisters underneath the University of Michigan stadium, to provide an important reminder to the athletes as they take the field, that ultimate success depends on your team.
+        </p>
+        <p className="leading-relaxed">
+          Similarly, our ability to be the premier provider of shoulder care in our region depends on the success of our team. We work together to ensure that you have the best possible experience and outcome.
         </p>
       </div>
 
@@ -26,51 +29,47 @@ export default function TeamPage() {
       <section className="space-y-8">
         <h2 className="text-3xl font-bold">Meet Our Team</h2>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {/* Team Member 1 */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Tessa Lilley */}
           <Card>
             <div className="bg-muted h-64 rounded-t-lg flex items-center justify-center">
               <p className="text-muted-foreground">Team Photo</p>
             </div>
             <CardHeader>
-              <CardTitle>Lorem Ipsum</CardTitle>
-              <p className="text-sm text-muted-foreground">Practice Manager</p>
+              <CardTitle>Tessa Lilley, PA-C</CardTitle>
+              <p className="text-sm text-muted-foreground">Physician Assistant</p>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                Tessa Lilley is a physician assistant who works with Dr. Jacob Kirsch. She completed her Bachelor of Science in Biology with a concentration in pre-med from the University of Maine and her Master of Physician Assistant Studies at Northeastern University in Boston.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                She assists Dr. Kirsch in surgery and will directly interface with you throughout the management of your shoulder condition. She also provides several nonoperative treatment modalities (ie. Injections). She is available to answer your questions throughout the perioperative course.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                She can be contacted through the patient portal, by calling Michelle&apos;s direct number, or by calling the main office number: <a href="tel:7818902133" className="text-primary hover:underline">781-890-2133</a>.
               </p>
             </CardContent>
           </Card>
 
-          {/* Team Member 2 */}
+          {/* Michelle Milks */}
           <Card>
             <div className="bg-muted h-64 rounded-t-lg flex items-center justify-center">
               <p className="text-muted-foreground">Team Photo</p>
             </div>
             <CardHeader>
-              <CardTitle>Dolor Sit</CardTitle>
-              <p className="text-sm text-muted-foreground">Medical Assistant</p>
+              <CardTitle>Michelle Milks</CardTitle>
+              <p className="text-sm text-muted-foreground">Surgical Coordinator</p>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <p className="text-sm text-muted-foreground">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                Michelle handles all surgery, imaging and procedure scheduling for Dr. Kirsch. She is the bridge between patient and provider.
               </p>
-            </CardContent>
-          </Card>
-
-          {/* Team Member 3 */}
-          <Card>
-            <div className="bg-muted h-64 rounded-t-lg flex items-center justify-center">
-              <p className="text-muted-foreground">Team Photo</p>
-            </div>
-            <CardHeader>
-              <CardTitle>Amet Consectetur</CardTitle>
-              <p className="text-sm text-muted-foreground">Patient Coordinator</p>
-            </CardHeader>
-            <CardContent>
               <p className="text-sm text-muted-foreground">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+                She is able to answer common logistical questions before and after surgery, as well as connect patients with the team to answer any clinical questions.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Michelle can be reached at <a href="tel:6177515242" className="text-primary hover:underline">617-751-5242</a>
               </p>
             </CardContent>
           </Card>

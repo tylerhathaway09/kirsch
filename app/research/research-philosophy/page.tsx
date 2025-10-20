@@ -14,15 +14,15 @@ export default function ResearchPhilosophyPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Dr. Kirsch is highly committed to raising the bar of high-quality patient care through research and education. Foundational to his practice is the commitment to provide evidence-based patient care, perform cutting-edge research, and offer interdisciplinary education to the next generation of physicians.
         </p>
 
         <p className="leading-relaxed">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. He is dedicated to training the next generation of shoulder surgeons and advancing the field through research and education.
+          Dr. Kirsch accomplishes this through collecting patient reported data from all his surgical cases, as well as publishing research to advance the field. His academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks on shoulder surgery and orthopedics.
         </p>
 
         <p className="leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Dr. Kirsch is involved as an educator with the Tufts University Orthopedic Residency program as well as in both the Massachusetts General Hospital and New England Baptist Shoulder Fellowships.
+          He is dedicated to training the next generation of shoulder surgeons and is involved as an educator with the Tufts University Orthopedic Residency program as well as in both the Massachusetts General Hospital and New England Baptist Shoulder Fellowships.
         </p>
       </div>
 

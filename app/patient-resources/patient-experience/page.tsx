@@ -14,15 +14,11 @@ export default function PatientExperiencePage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Our team is committed to provide an unmatched patient experience through dedicated service and unwavering support. We recognize that there are many providers in our region, and we are honored that you have chosen our team to help you navigate your shoulder condition.
         </p>
 
         <p className="leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-
-        <p className="leading-relaxed">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+          We take that responsibility seriously. Dr. Kirsch, Tessa and Michelle are all available to help answer your questions and ensure that this process is as seamless as possible.
         </p>
       </div>
 

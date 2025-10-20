@@ -15,70 +15,17 @@ export default function ResearchAndEducationPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks on shoulder surgery and orthopedics. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Dr. Kirsch is highly committed to raising the bar of high-quality patient care through research and education. Foundational to his practice is the commitment to provide evidence-based patient care, perform cutting-edge research, and offer interdisciplinary education to the next generation of physicians.
         </p>
 
         <p className="leading-relaxed">
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. He is dedicated to training the next generation of shoulder surgeons and is involved as an educator with the Tufts University Orthopedic Residency program as well as in both the Massachusetts General Hospital and New England Baptist Shoulder Fellowships.
+          Dr. Kirsch accomplishes this through collecting patient reported data from all his surgical cases, as well as publishing research to advance the field. Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks on shoulder surgery and orthopedics.
         </p>
 
         <p className="leading-relaxed">
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Dr. Kirsch is a sought-after speaker, lecturing nationally and internationally on various shoulder conditions, and serves as a clinical reviewer for prestigious journals, including the Journal of Shoulder and Elbow Surgery.
+          Another core element of education is developed through partnering with patients to help formulate an individualized treatment plan based on the pathology and the available evidence-based treatment options. To that end, we have assembled various resources to help provide a more comprehensive understanding of common shoulder conditions and the possible treatment options.
         </p>
       </div>
-
-      <Separator className="my-12" />
-
-      {/* Research Areas */}
-      <section className="space-y-8">
-        <h2 className="text-3xl font-bold">Research Focus Areas</h2>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card>
-            <CardHeader>
-              <CardTitle>Lorem Ipsum</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Dolor Sit Amet</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Consectetur Adipiscing</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle>Elit Sed Do</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
 
       <Separator className="my-12" />
 
