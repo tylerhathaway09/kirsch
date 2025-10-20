@@ -268,8 +268,8 @@ export function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/shoulder-procedures/shoulder-bursitis-impingement" className="cursor-pointer">
-                  Shoulder Bursitis/Impingement
+                <Link href="/shoulder-procedures/subacromial-decompression" className="cursor-pointer">
+                  Subacromial Decompression
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>

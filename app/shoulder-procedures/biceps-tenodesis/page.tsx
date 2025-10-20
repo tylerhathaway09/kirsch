@@ -8,7 +8,7 @@ export const metadata = {
   description: "Information about biceps tenodesis surgery for treatment of biceps tendonitis and SLAP tears, providing reliable pain relief and improved function.",
 };
 
-export default function BicepsTenodesis Page() {
+export default function BicepsTenodesisPage() {
   return (
     <div className="container py-16 max-w-4xl">
       <h1 className="text-4xl font-bold mb-8">Biceps Tenodesis</h1>
