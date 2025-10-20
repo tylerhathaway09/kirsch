@@ -112,7 +112,7 @@ export default function Home() {
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Featured Research</h2>
             <p className="text-muted-foreground">
-              Dr. Kirsch's academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. He is dedicated to training the next generation of shoulder surgeons and advancing the field through research and education.
+              Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. He is dedicated to training the next generation of shoulder surgeons and advancing the field through research and education.
             </p>
           </div>
 

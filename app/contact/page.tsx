@@ -53,7 +53,7 @@ export default function ContactPage() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Schedule a consultation to discuss your shoulder care needs. We're here to help you return to the activities you love.
+          Schedule a consultation to discuss your shoulder care needs. We&apos;re here to help you return to the activities you love.
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -62,7 +62,7 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle>Send Us a Message</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you as soon as possible.
+                Fill out the form below and we&apos;ll get back to you as soon as possible.
               </CardDescription>
             </CardHeader>
             <CardContent>

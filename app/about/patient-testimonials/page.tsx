@@ -29,7 +29,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dr. Kirsch was exceptional in every way."
+                &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dr. Kirsch was exceptional in every way.&quot;
               </p>
               <p className="font-semibold">- John D.</p>
             </CardContent>
@@ -42,7 +42,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Highly recommend!"
+                &quot;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Highly recommend!&quot;
               </p>
               <p className="font-semibold">- Sarah M.</p>
             </CardContent>
@@ -55,7 +55,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Best decision I ever made."
+                &quot;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Best decision I ever made.&quot;
               </p>
               <p className="font-semibold">- Michael R.</p>
             </CardContent>
@@ -68,7 +68,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Professional and caring."
+                &quot;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Professional and caring.&quot;
               </p>
               <p className="font-semibold">- Jennifer K.</p>
             </CardContent>
@@ -81,7 +81,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Back to playing tennis!"
+                &quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Back to playing tennis!&quot;
               </p>
               <p className="font-semibold">- David L.</p>
             </CardContent>
@@ -94,7 +94,7 @@ export default function PatientTestimonialsPage() {
                 <div className="text-yellow-500">★★★★★</div>
               </div>
               <p className="text-muted-foreground mb-4 italic">
-                "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Excellent surgeon and wonderful bedside manner."
+                &quot;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Excellent surgeon and wonderful bedside manner.&quot;
               </p>
               <p className="font-semibold">- Lisa T.</p>
             </CardContent>

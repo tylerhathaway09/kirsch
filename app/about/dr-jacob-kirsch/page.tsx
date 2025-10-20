@@ -23,11 +23,11 @@ export default function DrJacobKirschPage() {
         </p>
 
         <p className="leading-relaxed">
-          Dr. Kirsch attended The George Washington University School of Medicine, graduating with distinction as an Alpha Omega Alpha National Medical Honor Society member. He pursued an Orthopedic Surgery residency at the University of Michigan, where he served as a team physician for the men's basketball team for 3 years, blending his passion for sports and orthopedic care. He then further specialized his training during a Shoulder and Elbow fellowship at the prestigious Rothman Institute and received advanced international training in shoulder surgery from world-renowned experts in Lyon, France.
+          Dr. Kirsch attended The George Washington University School of Medicine, graduating with distinction as an Alpha Omega Alpha National Medical Honor Society member. He pursued an Orthopedic Surgery residency at the University of Michigan, where he served as a team physician for the men&apos;s basketball team for 3 years, blending his passion for sports and orthopedic care. He then further specialized his training during a Shoulder and Elbow fellowship at the prestigious Rothman Institute and received advanced international training in shoulder surgery from world-renowned experts in Lyon, France.
         </p>
 
         <p className="leading-relaxed">
-          Dr. Kirsch's academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. He is dedicated to training the next generation of shoulder surgeons and is involved as an educator with the Tufts University Orthopedic Residency program as well as in both the Massachusetts General Hospital and New England Baptist Shoulder Fellowships. Moreover, Dr. Kirsch is a sought-after speaker, lecturing nationally and internationally on various shoulder conditions, and serves as a clinical reviewer for prestigious journals, including the Journal of Shoulder and Elbow Surgery. He is an active member of the American Shoulder and Elbow Surgeons, Arthroscopy Association of North America and the American Academy of Orthopedic Surgeons, reflecting his commitment to maintaining the highest standards in orthopedic surgery. He was recognized by his peers as a Castle Connelly Top Doctor for 2025.
+          Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. He is dedicated to training the next generation of shoulder surgeons and is involved as an educator with the Tufts University Orthopedic Residency program as well as in both the Massachusetts General Hospital and New England Baptist Shoulder Fellowships. Moreover, Dr. Kirsch is a sought-after speaker, lecturing nationally and internationally on various shoulder conditions, and serves as a clinical reviewer for prestigious journals, including the Journal of Shoulder and Elbow Surgery. He is an active member of the American Shoulder and Elbow Surgeons, Arthroscopy Association of North America and the American Academy of Orthopedic Surgeons, reflecting his commitment to maintaining the highest standards in orthopedic surgery. He was recognized by his peers as a Castle Connelly Top Doctor for 2025.
         </p>
       </div>
 
@@ -48,7 +48,7 @@ export default function DrJacobKirschPage() {
             <p><strong>Residency:</strong> University of Michigan - Orthopedic Surgery</p>
             <p><strong>Fellowship:</strong> Rothman Institute - Shoulder and Elbow Surgery</p>
             <p><strong>Advanced Training:</strong> Lyon, France - International training in shoulder surgery</p>
-            <p><strong>Team Physician:</strong> University of Michigan Men's Basketball (3 years)</p>
+            <p><strong>Team Physician:</strong> University of Michigan Men&apos;s Basketball (3 years)</p>
           </div>
         </div>
 

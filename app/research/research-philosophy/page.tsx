@@ -14,7 +14,7 @@ export default function ResearchPhilosophyPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dr. Kirsch's academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
         <p className="leading-relaxed">
@@ -31,7 +31,7 @@ export default function ResearchPhilosophyPage() {
       <div className="text-center space-y-4">
         <h3 className="text-2xl font-semibold">View Publications</h3>
         <p className="text-muted-foreground">
-          Learn more about Dr. Kirsch's research contributions
+          Learn more about Dr. Kirsch&apos;s research contributions
         </p>
         <Button asChild size="lg">
           <Link href="/research/dr-kirsch-research">View Research</Link>

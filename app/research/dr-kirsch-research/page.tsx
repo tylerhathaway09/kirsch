@@ -11,7 +11,7 @@ export const metadata = {
 export default function DrKirschResearchPage() {
   return (
     <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Dr. Kirsch's Research</h1>
+      <h1 className="text-4xl font-bold mb-8">Dr. Kirsch&apos;s Research</h1>
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
         <p className="leading-relaxed text-lg">
