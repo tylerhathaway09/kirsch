@@ -28,13 +28,24 @@ export default function FirstVisitGuidePage() {
             <div>
               <h3 className="font-semibold mb-2">What to Bring:</h3>
               <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-                <li>Photo ID and insurance card</li>
-                <li>Completed patient forms (if provided in advance)</li>
+                <li>Driver&apos;s License</li>
+                <li>Insurance information</li>
+                <li>Injection history (dates of injections are important!)</li>
+                <li>Records from non-operative care</li>
+                <li>Records from prior surgical treatment on shoulder (imaging results, operative reports, etc.)</li>
                 <li>List of current medications and dosages</li>
-                <li>Any previous imaging (X-rays, MRI, CT scans) on disc or through your patient portal</li>
-                <li>Relevant medical records from other providers</li>
                 <li>List of questions or concerns you want to discuss</li>
               </ul>
+            </div>
+            <Separator />
+            <div>
+              <h3 className="font-semibold mb-2">Previous Imaging:</h3>
+              <p className="text-muted-foreground mb-2">
+                It is extremely important to bring any prior imaging that you have had done on your shoulder. The imaging report, while helpful, is not necessary. However, the actual images are essential!
+              </p>
+              <p className="text-muted-foreground">
+                Please ensure that if you have had a prior MRI or CT to bring the actual images on a CD. If you have had prior X-rays, you may be asked to get new ones at your visit.
+              </p>
             </div>
             <Separator />
             <div>

@@ -138,40 +138,17 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <h3 className="font-semibold mb-2">Phone</h3>
-                  <a href="tel:+11234567890" className="text-primary hover:underline">
-                    (123) 456-7890
+                  <h3 className="font-semibold mb-2">Main Office</h3>
+                  <a href="tel:7818902133" className="text-primary hover:underline">
+                    781-890-2133
                   </a>
                 </div>
                 <Separator />
                 <div>
-                  <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:contact@jacobkirschmd.com" className="text-primary hover:underline">
-                    contact@jacobkirschmd.com
+                  <h3 className="font-semibold mb-2">Surgical Coordinator (Michelle Milks)</h3>
+                  <a href="tel:6177515242" className="text-primary hover:underline">
+                    617-751-5242
                   </a>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle>Office Locations</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-semibold mb-1">Boston Location</h3>
-                  <p className="text-sm text-muted-foreground">
-                    123 Medical Plaza Drive<br />
-                    Boston, MA 02101
-                  </p>
-                </div>
-                <Separator />
-                <div>
-                  <h3 className="font-semibold mb-1">Satellite Office</h3>
-                  <p className="text-sm text-muted-foreground">
-                    456 Healthcare Center<br />
-                    Cambridge, MA 02138
-                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -180,12 +157,20 @@ export default function ContactPage() {
               <CardHeader>
                 <CardTitle>Surgery Locations</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="space-y-4">
                 <div>
                   <h3 className="font-semibold mb-1">New England Baptist Hospital</h3>
                   <p className="text-sm text-muted-foreground">
                     125 Parker Hill Avenue<br />
                     Boston, MA 02120
+                  </p>
+                </div>
+                <Separator />
+                <div>
+                  <h3 className="font-semibold mb-1">Boston Outpatient Surgical Suites (BOSS)</h3>
+                  <p className="text-sm text-muted-foreground">
+                    71 Border Rd<br />
+                    Waltham, MA 02451
                   </p>
                 </div>
               </CardContent>
