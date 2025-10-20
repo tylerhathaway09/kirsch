@@ -14,11 +14,11 @@ export default function PatientExperiencePage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Our team is committed to provide an unmatched patient experience through dedicated service and unwavering support. We recognize that there are many providers in our region, and we are honored that you have chosen our team to help you navigate your shoulder condition.
+          Our team is dedicated to providing an exceptional patient experience through personalized attention, open communication, and compassionate care. We understand that you have many choices when it comes to your orthopedic care, and we are truly honored that you&apos;ve placed your trust in us.
         </p>
 
         <p className="leading-relaxed">
-          We take that responsibility seriously. Dr. Kirsch, Tessa and Michelle are all available to help answer your questions and ensure that this process is as seamless as possible.
+          From your first visit to your final follow-up, our goal is to make the process as smooth, supportive, and stress-free as possible. Dr. Kirsch, Tessa, and Michelle are always available to answer your questions, guide you through your care plan, and ensure that you feel confident and cared for every step of the way.
         </p>
       </div>
 

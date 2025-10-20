@@ -15,15 +15,19 @@ export default function ResearchAndEducationPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          Dr. Kirsch is highly committed to raising the bar of high-quality patient care through research and education. Foundational to his practice is the commitment to provide evidence-based patient care, perform cutting-edge research, and offer interdisciplinary education to the next generation of physicians.
+          Dr. Kirsch is deeply committed to advancing the standard of high-quality, evidence-based shoulder care through both research and education. Central to his practice is the belief that outstanding patient care depends on continual learning, innovation, and collaboration.
         </p>
 
         <p className="leading-relaxed">
-          Dr. Kirsch accomplishes this through collecting patient reported data from all his surgical cases, as well as publishing research to advance the field. Dr. Kirsch&apos;s academic work includes more than 75 peer-reviewed scientific papers and contributions to more than 13 textbooks on shoulder surgery and orthopedics.
+          He integrates cutting-edge research into everyday practice by collecting patient-reported outcomes from all surgical cases. This data helps evaluate and improve treatment results, contributing to published studies that shape the future of shoulder surgery.
         </p>
 
         <p className="leading-relaxed">
-          Another core element of education is developed through partnering with patients to help formulate an individualized treatment plan based on the pathology and the available evidence-based treatment options. To that end, we have assembled various resources to help provide a more comprehensive understanding of common shoulder conditions and the possible treatment options.
+          Education is also a cornerstone of Dr. Kirsch&apos;s approach, both for physicians and for patients. He mentors the next generation of orthopedic surgeons through teaching and research, while also empowering patients to make informed decisions. By working together to create a personalized treatment plan grounded in the latest evidence and tailored to each individual&apos;s goals, Dr. Kirsch ensures every patient receives the most effective care possible.
+        </p>
+
+        <p className="leading-relaxed">
+          To support this, we&apos;ve assembled a collection of patient resources that provide clear, easy-to-understand information about common shoulder conditions and their treatment options.
         </p>
       </div>
 

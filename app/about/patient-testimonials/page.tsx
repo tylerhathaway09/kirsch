@@ -15,90 +15,78 @@ export default function PatientTestimonialsPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
         <p className="leading-relaxed text-lg">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hear from our patients about their experience with Dr. Kirsch and our practice.
+          At the heart of our practice is a commitment to exceptional patient care and outcomes. We are grateful for the trust our patients place in us and the opportunity to help them return to the activities they love.
         </p>
       </div>
 
-      {/* Testimonials Grid */}
+      {/* Main Content Card */}
       <section className="space-y-8">
-        <div className="grid md:grid-cols-2 gap-6">
-          {/* Testimonial 1 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
-              </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dr. Kirsch was exceptional in every way.&quot;
-              </p>
-              <p className="font-semibold">- John D.</p>
-            </CardContent>
-          </Card>
+        <Card>
+          <CardContent className="pt-8 pb-8">
+            <div className="space-y-6 text-center max-w-3xl mx-auto">
+              <div className="text-6xl mb-4">⭐⭐⭐⭐⭐</div>
 
-          {/* Testimonial 2 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
-              </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Highly recommend!&quot;
-              </p>
-              <p className="font-semibold">- Sarah M.</p>
-            </CardContent>
-          </Card>
+              <h2 className="text-2xl font-semibold">Excellence in Shoulder Care</h2>
 
-          {/* Testimonial 3 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
-              </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Best decision I ever made.&quot;
+              <p className="text-muted-foreground">
+                Our patients consistently report high satisfaction with their care experience and outcomes. Dr. Kirsch and his team are dedicated to providing personalized, compassionate care that helps patients achieve their goals and return to the activities that matter most to them.
               </p>
-              <p className="font-semibold">- Michael R.</p>
-            </CardContent>
-          </Card>
 
-          {/* Testimonial 4 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
-              </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Professional and caring.&quot;
-              </p>
-              <p className="font-semibold">- Jennifer K.</p>
-            </CardContent>
-          </Card>
+              <div className="pt-6 space-y-4">
+                <p className="text-muted-foreground">
+                  Many of our patients have shared their positive experiences with Dr. Kirsch&apos;s expertise in shoulder surgery, from rotator cuff repairs and shoulder replacements to complex revision procedures. Patients appreciate:
+                </p>
 
-          {/* Testimonial 5 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
-              </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Back to playing tennis!&quot;
-              </p>
-              <p className="font-semibold">- David L.</p>
-            </CardContent>
-          </Card>
+                <div className="grid md:grid-cols-2 gap-4 text-left">
+                  <div className="p-4 bg-muted rounded-lg">
+                    <p className="font-semibold mb-2">Specialized Expertise</p>
+                    <p className="text-sm text-muted-foreground">
+                      Dr. Kirsch&apos;s exclusive focus on shoulder conditions and use of the most advanced techniques
+                    </p>
+                  </div>
 
-          {/* Testimonial 6 */}
-          <Card>
-            <CardContent className="pt-6">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-500">★★★★★</div>
+                  <div className="p-4 bg-muted rounded-lg">
+                    <p className="font-semibold mb-2">Personalized Care</p>
+                    <p className="text-sm text-muted-foreground">
+                      Individualized treatment plans tailored to each patient&apos;s unique needs and goals
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-muted rounded-lg">
+                    <p className="font-semibold mb-2">Clear Communication</p>
+                    <p className="text-sm text-muted-foreground">
+                      Thorough explanations of conditions, treatment options, and what to expect during recovery
+                    </p>
+                  </div>
+
+                  <div className="p-4 bg-muted rounded-lg">
+                    <p className="font-semibold mb-2">Successful Outcomes</p>
+                    <p className="text-sm text-muted-foreground">
+                      Excellent results with return to work, sports, and daily activities
+                    </p>
+                  </div>
+                </div>
               </div>
-              <p className="text-muted-foreground mb-4 italic">
-                &quot;Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. Excellent surgeon and wonderful bedside manner.&quot;
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent className="pt-6 pb-6">
+            <div className="text-center space-y-4">
+              <h3 className="text-xl font-semibold">Patient-Reported Outcomes</h3>
+              <p className="text-muted-foreground max-w-2xl mx-auto">
+                We continuously collect and analyze patient-reported outcomes from all surgical cases to monitor and improve our results. This commitment to quality and evidence-based care ensures that our patients receive the best possible treatment and outcomes.
               </p>
-              <p className="font-semibold">- Lisa T.</p>
-            </CardContent>
-          </Card>
+            </div>
+          </CardContent>
+        </Card>
+
+        <div className="p-6 bg-accent/10 rounded-lg border border-accent/20 text-center">
+          <h3 className="font-semibold mb-2">Share Your Experience</h3>
+          <p className="text-sm text-muted-foreground">
+            If you&apos;ve been treated by Dr. Kirsch and would like to share your experience, please let us know. Your feedback helps us continue to improve and helps others make informed decisions about their shoulder care.
+          </p>
         </div>
       </section>
 

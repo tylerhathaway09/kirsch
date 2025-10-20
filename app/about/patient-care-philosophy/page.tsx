@@ -14,15 +14,19 @@ export default function PatientCarePhilosophyPage() {
 
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed text-lg">
-          My number one goal in treating patients is to improve their quality of life through individualized and compassionate care. Shoulder problems can significantly impact one&apos;s life, whether they&apos;re a professional athlete, weekend warrior, or an average person struggling to do basic activities such as sleep and work due to shoulder pain from a rotator cuff tear or arthritis. Every patient has unique symptoms, life circumstances, and goals related to their life. I believe in a patient-centered approach with shared decision-making to achieve the best possible outcome for each patient. Not all problems require a surgical solution and I reserve surgery for those patients who have either failed conservative treatment or have acute injuries, which necessitate surgical intervention. Often shoulder problems can be managed with non-operative treatment such as physical therapy, anti-inflammatory medications, and selective injections.
+          My top priority is to help each patient improve their quality of life through personalized, compassionate care. Shoulder problems can affect anyone, whether you&apos;re a professional athlete, a weekend golfer, or simply someone struggling to sleep or work because of shoulder pain from a rotator cuff tear or arthritis. Every patient&apos;s situation is unique, and so are their goals. That&apos;s why I take a patient-centered approach, working together through shared decision-making to find the treatment plan that best fits each person&apos;s needs and lifestyle.
         </p>
 
         <p className="leading-relaxed">
-          Since starting practice, I have focused exclusively and entirely on treating patients with shoulder issues. By fully committing my professional and academic focus to caring for patients with shoulder problems, I can offer patients a comprehensive and evidence-based approach to their condition with a level of clinical and surgical expertise that results in better and more predictable patient outcomes. While this approach may seem atypical, as it is far more common for surgeons to take care of multiple body parts, I have found that by focusing only on shoulder problems, my experience and insight result in higher-quality and specialized care for patients, especially those with more complex pathology.
+          Not every shoulder problem requires surgery. Whenever possible, I begin with non-surgical treatments such as physical therapy, anti-inflammatory medications, and targeted injections. Surgery is reserved for patients who either do not improve with conservative care or who have an acute injury that clearly requires surgical repair.
         </p>
 
         <p className="leading-relaxed">
-          Our team is committed to not only providing the highest-quality care but to improving patient outcomes and satisfaction for all patients. To this end, our team collects patient-reported outcomes on all patients and is committed to following patients longitudinally to better understand how patients do over the long term so that we may continue to improve the experience and outcomes for future patients. We also use this information to educate other surgeons so they can provide better care for their patients as well.
+          Since the beginning of my career, I have chosen to focus exclusively on shoulder care. By dedicating my entire professional and academic work to the shoulder, I&apos;m able to offer patients the most up-to-date, evidence-based treatments and a depth of experience that leads to more reliable, successful outcomes. While many surgeons treat multiple joints, I&apos;ve found that concentrating solely on the shoulder allows me to deliver a higher level of expertise, especially for patients with complex or challenging conditions.
+        </p>
+
+        <p className="leading-relaxed">
+          Our team is deeply committed to delivering the highest quality care and the best possible results for every patient. We continuously track and analyze patient-reported outcomes to understand how our patients recover and improve over time. This data not only helps us enhance the care experience for future patients but also contributes to the education of other surgeons, ensuring that more people everywhere receive better shoulder care.
         </p>
       </div>
 

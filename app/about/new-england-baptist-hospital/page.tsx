@@ -18,20 +18,16 @@ export default function NewEnglandBaptistHospitalPage() {
 
         <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
           <p className="leading-relaxed">
-            New England Baptist Hospital (NEBH) was founded in 1893 and is one of the oldest orthopedic hospitals in the United States. It is currently the only orthopedic specialty hospital in New England, performing the highest annual volume of joint replacement procedures in our region.
+            Founded in 1893, New England Baptist Hospital (NEBH) is one of the oldest and most respected orthopedic hospitals in the United States. It remains the only hospital in New England dedicated exclusively to orthopedic care and performs the highest annual volume of joint replacement procedures in the region. Patients from across the country and around the world choose NEBH for its world-class orthopedic expertise. The hospital is consistently recognized by U.S. News & World Report as one of the best hospitals in the nation for orthopedic surgery.
           </p>
 
           <p className="leading-relaxed">
-            NEBH serves as a destination for patients all over the world seeking orthopedic care, and is consistently recognized by U.S. News & World Report as one of the best hospitals in the country.
-          </p>
-
-          <p className="leading-relaxed">
-            Dr. Kirsch is one of only two surgeons at NEBH that specialize in only shoulder surgery. Dr. Kirsch is also one of the highest volume shoulder replacement surgeons at NEBH. Patients may be directed to have their surgery at NEBH because of their medical history, or because of the increased complexity of their surgery.
+            Dr. Jacob Kirsch is one of only two surgeons at NEBH who focus exclusively on shoulder surgery, and he is among the highest-volume shoulder replacement surgeons at the hospital. Some patients have their surgery at NEBH due to specific medical considerations or because their case involves a higher level of complexity that benefits from the hospital&apos;s specialized resources.
           </p>
 
           <div className="p-6 bg-muted rounded-lg">
             <h3 className="font-semibold mb-2">Address:</h3>
-            <p>125 Parker Hill Ave, Boston, MA 02120</p>
+            <p>125 Parker Hill Avenue, Boston, MA 02120</p>
           </div>
         </div>
       </section>
@@ -44,15 +40,15 @@ export default function NewEnglandBaptistHospitalPage() {
 
         <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
           <p className="leading-relaxed">
-            Boston Outpatient Surgical Suites (BOSS) was the first ambulatory care surgery center in the greater Boston area. BOSS has recently undergone a 30 million dollar upgrade and is now located in the newly built medical office building in Waltham, MA.
+            Boston Outpatient Surgical Suites (BOSS) was the first ambulatory surgery center in the Greater Boston area and continues to set the standard for outpatient surgical care. Following a recent $30 million renovation, BOSS is now located in a state-of-the-art medical facility in Waltham, MA, featuring eight advanced operating rooms and a full range of perisurgical services designed to ensure safety, comfort, and exceptional outcomes.
           </p>
 
           <p className="leading-relaxed">
-            BOSS is currently the most state-of-the-art surgery center in New England, with 8 operating rooms and an array of perisurgical services. The goal of BOSS is simple, to provide the highest-quality outpatient surgical care in the country.
+            The mission of BOSS is simple: to deliver the highest-quality outpatient surgical care in the country.
           </p>
 
           <p className="leading-relaxed">
-            Dr. Kirsch performs the majority of his shoulder surgeries, including shoulder replacements, rotator cuff repairs, tendon transfers and shoulder stabilization procedures at BOSS.
+            Dr. Jacob Kirsch performs the majority of his shoulder surgeries at BOSS, including shoulder replacements, rotator cuff repairs, tendon transfers, and shoulder stabilization procedures. Patients benefit from the center&apos;s modern technology, efficient care environment, and highly skilled staff, all focused on helping you recover quickly and return to the activities you love.
           </p>
 
           <div className="p-6 bg-muted rounded-lg space-y-2">

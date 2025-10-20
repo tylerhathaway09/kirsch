@@ -20,43 +20,40 @@ export default function DrKirschResearchPage() {
       </div>
 
       <section className="space-y-6">
-        <h2 className="text-2xl font-bold">Selected Publications</h2>
+        <h2 className="text-2xl font-bold">Publications</h2>
 
         <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Lorem Ipsum Dolor Sit Amet</CardTitle>
-            <p className="text-sm text-muted-foreground">Journal of Shoulder and Elbow Surgery, 2024</p>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <CardContent className="pt-6">
+            <p className="text-muted-foreground mb-4">
+              Dr. Kirsch has authored more than 75 peer-reviewed scientific papers and contributed to more than a dozen textbooks on shoulder surgery and orthopedics. His research spans a wide range of topics in shoulder care, including rotator cuff repair, shoulder replacement outcomes, surgical techniques, and patient-reported outcomes.
+            </p>
+            <p className="text-muted-foreground">
+              He serves as a clinical reviewer for prestigious journals including the Journal of Shoulder and Elbow Surgery, and regularly presents his research at national and international conferences.
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Consectetur Adipiscing Elit</CardTitle>
-            <p className="text-sm text-muted-foreground">American Journal of Sports Medicine, 2023</p>
+            <CardTitle className="text-lg">Research Interests</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-muted-foreground">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              <li>• Shoulder replacement surgery and outcomes</li>
+              <li>• Rotator cuff repair techniques and healing</li>
+              <li>• Revision shoulder surgery</li>
+              <li>• Tendon transfer procedures</li>
+              <li>• Patient-reported outcome measures</li>
+              <li>• Surgical techniques and innovations</li>
+            </ul>
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Duis Aute Irure Dolor</CardTitle>
-            <p className="text-sm text-muted-foreground">Journal of Bone and Joint Surgery, 2023</p>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-          </CardContent>
-        </Card>
+        <div className="p-6 bg-accent/10 rounded-lg border border-accent/20">
+          <p className="text-sm text-muted-foreground">
+            For a complete list of publications or to request copies of specific research papers, please contact our office.
+          </p>
+        </div>
       </section>
 
       <Separator className="my-12" />

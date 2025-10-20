@@ -15,7 +15,7 @@ export default function DrJacobKirschPage() {
       {/* Main Bio Section */}
       <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground">
         <p className="leading-relaxed">
-          Dr. Jacob Kirsch is board board-certified orthopedic surgeon and shoulder specialist at the Boston Bone and Joint Institute and the nationally renowned New England Baptist Hospital. Dr. Kirsch is also an Assistant Professor of Orthopedic Surgery at Tufts University School of Medicine.
+          Dr. Jacob Kirsch is a board-certified orthopedic surgeon and shoulder specialist at the Boston Bone and Joint Institute and the nationally renowned New England Baptist Hospital. He also serves as an Assistant Professor of Orthopedic Surgery at Tufts University School of Medicine.
         </p>
 
         <p className="leading-relaxed">
