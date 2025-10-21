@@ -219,7 +219,15 @@ All content has been sourced from:
 
 ### Recent Updates
 
-#### Design Overhaul (2025-10-21)
+#### UI Refinements (2025-10-21 PM)
+- **Card spacing fixes**: Removed gaps above images in cards with gradient backgrounds
+- **Homepage cards**: Research cards now have images flush at top with `p-0 overflow-hidden`
+- **Team page cards**: Fixed spacing on team member cards (Tessa Lilley, Michelle Milks)
+- **TableOfContents repositioning**: Moved from right to left side on all 38 content pages
+- **Grid layout update**: Changed from `[1fr_250px]` to `[250px_1fr]` for left-side navigation
+- **Production verified**: All 44 pages building successfully, deployed to main
+
+#### Design Overhaul (2025-10-21 AM)
 - **Complete UX/design transformation** inspired by michaelfumd.com
 - **New color system**: Professional medical blue (#094BCC) with refined oklch color palette
 - **Typography upgrade**: Merriweather serif headings for professional medical aesthetic
