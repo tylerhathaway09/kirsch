@@ -169,7 +169,6 @@ export default function ShoulderStabilizationPage() {
           </div>
         </section>
       </div>
-      </div>
 
       <Separator className="my-12" />
 
@@ -245,11 +244,11 @@ export default function ShoulderStabilizationPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
-    </div>
+        </div>
 
-    {/* Table of Contents Sidebar */}
-    <TableOfContents sections={sections} />
-  </div>
-  </div>
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
+      </div>
+    </div>
   );
 }
