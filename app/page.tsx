@@ -118,8 +118,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Research Card 1 */}
-            <Card className="border-l-4 border-l-primary">
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+            <Card className="border-l-4 border-l-primary p-0 overflow-hidden">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 flex items-center justify-center">
                 <div className="text-center px-6">
                   <p className="text-4xl font-bold text-primary mb-2">75+</p>
                   <p className="text-sm text-muted-foreground">Published Papers</p>
@@ -139,8 +139,8 @@ export default function Home() {
             </Card>
 
             {/* Research Card 2 */}
-            <Card className="border-l-4 border-l-primary">
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+            <Card className="border-l-4 border-l-primary p-0 overflow-hidden">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 flex items-center justify-center">
                 <div className="text-center px-6">
                   <p className="text-4xl font-bold text-primary mb-2">13+</p>
                   <p className="text-sm text-muted-foreground">Textbook Contributions</p>
@@ -160,8 +160,8 @@ export default function Home() {
             </Card>
 
             {/* Research Card 3 */}
-            <Card className="border-l-4 border-l-primary">
-              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+            <Card className="border-l-4 border-l-primary p-0 overflow-hidden">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 flex items-center justify-center">
                 <div className="text-center px-6">
                   <p className="text-4xl font-bold text-primary mb-2">100%</p>
                   <p className="text-sm text-muted-foreground">Evidence-Based</p>

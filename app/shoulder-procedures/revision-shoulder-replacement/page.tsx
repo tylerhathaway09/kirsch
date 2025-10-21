@@ -20,7 +20,12 @@ const sections = [
 export default function RevisionShoulderReplacementPage() {
   return (
     <div className="container py-20 max-w-7xl">
-      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-12">
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
+
+
+
         {/* Main Content */}
         <div>
           <h1 className="text-4xl font-bold mb-8">Revision Shoulder Replacement</h1>
@@ -254,9 +259,6 @@ export default function RevisionShoulderReplacementPage() {
             </Button>
           </div>
         </div>
-
-        {/* Table of Contents Sidebar */}
-        <TableOfContents sections={sections} />
       </div>
     </div>
   );
