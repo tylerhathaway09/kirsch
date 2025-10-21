@@ -50,8 +50,8 @@ export default function TeamPage() {
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Tessa Lilley */}
-              <Card>
-                <div className="bg-muted h-64 rounded-t-lg flex items-center justify-center">
+              <Card className="p-0 overflow-hidden">
+                <div className="bg-muted h-64 flex items-center justify-center">
                   <p className="text-muted-foreground">Team Photo</p>
                 </div>
                 <CardHeader>
@@ -72,8 +72,8 @@ export default function TeamPage() {
               </Card>
 
               {/* Michelle Milks */}
-              <Card>
-                <div className="bg-muted h-64 rounded-t-lg flex items-center justify-center">
+              <Card className="p-0 overflow-hidden">
+                <div className="bg-muted h-64 flex items-center justify-center">
                   <p className="text-muted-foreground">Team Photo</p>
                 </div>
                 <CardHeader>
