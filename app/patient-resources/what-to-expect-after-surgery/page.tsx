@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,18 +9,35 @@ export const metadata = {
   description: "Comprehensive guide to what happens on surgery day, including arrival procedures, anesthesia, nerve blocks, surgical monitoring, and post-anesthesia recovery.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "arrival", title: "When You Arrive" },
+  { id: "anesthesiologist", title: "Meeting the Anesthesiologist" },
+  { id: "general-anesthesia", title: "General Anesthesia" },
+  { id: "nerve-block", title: "Nerve Block" },
+  { id: "during-surgery", title: "During Surgery" },
+  { id: "pacu", title: "Post Anesthesia Care Unit" },
+  { id: "recovery-expectations", title: "Recovery Room Expectations" },
+  { id: "visitors", title: "Family and Visitors" },
+];
+
 export default function WhatToExpectAfterSurgeryPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">What To Expect After Surgery</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">What To Expect After Surgery</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Understanding what happens on the day of surgery and immediately after helps ensure the best possible outcome and reduces anxiety about the process.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                Understanding what happens on the day of surgery and immediately after helps ensure the best possible outcome and reduces anxiety about the process.
+              </p>
+            </div>
+          </section>
 
-      <section className="space-y-8">
+          <section id="arrival" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>When You Arrive at the Hospital or Outpatient Suite</CardTitle>
@@ -33,7 +51,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="anesthesiologist" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Meeting the Anesthesiologist</CardTitle>
@@ -50,7 +72,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="general-anesthesia" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>General Anesthesia</CardTitle>
@@ -61,7 +87,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="nerve-block" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Nerve Block</CardTitle>
@@ -83,7 +113,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="during-surgery" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>During Surgery</CardTitle>
@@ -111,7 +145,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="pacu" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Post Anesthesia Care Unit (PACU)</CardTitle>
@@ -128,7 +166,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="recovery-expectations" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Recovery Room Expectations</CardTitle>
@@ -150,7 +192,11 @@ export default function WhatToExpectAfterSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="visitors" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Family and Visitors</CardTitle>
@@ -180,6 +226,11 @@ export default function WhatToExpectAfterSurgeryPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

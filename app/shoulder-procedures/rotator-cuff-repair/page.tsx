@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,26 +9,36 @@ export const metadata = {
   description: "Comprehensive information about arthroscopic rotator cuff repair surgery, including the procedure, recovery timeline, and what to expect.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 export default function RotatorCuffRepairPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Rotator Cuff Repair</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Rotator Cuff Repair</h1>
 
-      <div className="prose prose-lg max-w-none space-y-8">
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Overview</h2>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section id="overview" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Rotator cuff repair is an arthroscopic (minimally invasive) procedure to reattach torn rotator cuff tendons back to the bone. The surgery is performed through small 1 cm incisions using specialized instruments and a camera. This approach allows for precise repair while minimizing tissue damage and promoting faster recovery.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Dr. Kirsch utilizes the latest surgical techniques, including the use of high-strength suture anchors and biological augmentation patches when appropriate, to optimize healing and patient outcomes. The procedure addresses not only the rotator cuff tear but also any concomitant injuries such as labral tears, biceps tears, or bone spurs.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
+            <section id="procedure" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Rotator cuff surgery is performed under general anesthesia in addition to a nerve block for pain management. The procedure typically takes 1-2 hours depending on the extent of your rotator cuff damage.
           </p>
@@ -50,12 +61,12 @@ export default function RotatorCuffRepairPage() {
               </p>
             </div>
           </div>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
+            <section id="recovery" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from rotator cuff surgery is a slow and gradual process. Following surgery, you will be in a sling to help protect the rotator cuff repair.
           </p>
@@ -112,12 +123,12 @@ export default function RotatorCuffRepairPage() {
               </CardContent>
             </Card>
           </div>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
+            <section id="expectations" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
             <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
@@ -141,12 +152,12 @@ export default function RotatorCuffRepairPage() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+            </section>
+          </div>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <section className="space-y-6">
+          <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Related Information</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <Card>
@@ -205,18 +216,23 @@ export default function RotatorCuffRepairPage() {
             </CardContent>
           </Card>
         </div>
-      </section>
+          </section>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Questions About Rotator Cuff Repair?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to discuss whether this procedure is right for you
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Questions About Rotator Cuff Repair?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to discuss whether this procedure is right for you
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,26 +9,37 @@ export const metadata = {
   description: "Information about anatomic total shoulder replacement surgery for patients with shoulder arthritis and an intact rotator cuff.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "candidates", title: "Who Is a Candidate?" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 export default function AnatomicTotalShoulderReplacementPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Anatomic Total Shoulder Replacement</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Anatomic Total Shoulder Replacement</h1>
 
-      <div className="prose prose-lg max-w-none space-y-8">
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Overview</h2>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section id="overview" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Anatomic total shoulder replacement maintains the natural anatomy of your shoulder. A metal ball replaces the end of the upper arm bone (humerus) and a plastic cup replaces the socket (glenoid). This procedure is designed for patients with shoulder arthritis who have an intact rotator cuff.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Overall, anatomic total shoulder replacements are performed less commonly in the United States and internationally compared to reverse shoulder replacements. However, in certain patients this can still be a very effective type of shoulder replacement, providing excellent pain relief and restoration of function.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Who Is a Candidate?</h2>
+            <section id="candidates" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Who Is a Candidate?</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Anatomic total shoulder replacement is best suited for patients with:
           </p>
@@ -40,12 +52,12 @@ export default function AnatomicTotalShoulderReplacementPage() {
           <p className="text-muted-foreground leading-relaxed mt-4">
             The main determining factors include the quality and strength of the bone in the glenoid, and the quality of your soft tissues and rotator cuff tendons. Dr. Kirsch will thoroughly evaluate your condition using physical examination and advanced imaging to determine which type of shoulder replacement is best for you.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
+            <section id="procedure" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Anatomic total shoulder replacement is performed through an incision on the front of the shoulder. The procedure involves preparing the bone surfaces and implanting the prosthetic components with precision.
           </p>
@@ -65,12 +77,12 @@ export default function AnatomicTotalShoulderReplacementPage() {
               </p>
             </div>
           </div>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
+            <section id="recovery" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from shoulder replacement takes up to a full year, with approximately 90% of progress made by 6 months.
           </p>
@@ -132,12 +144,12 @@ export default function AnatomicTotalShoulderReplacementPage() {
               </CardContent>
             </Card>
           </div>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
+            <section id="expectations" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
             <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
@@ -161,12 +173,12 @@ export default function AnatomicTotalShoulderReplacementPage() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+            </section>
+          </div>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <section className="space-y-6">
+          <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Related Information</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <Card>
@@ -225,18 +237,23 @@ export default function AnatomicTotalShoulderReplacementPage() {
             </CardContent>
           </Card>
         </div>
-      </section>
+          </section>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Questions About Anatomic Shoulder Replacement?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to discuss whether this procedure is right for you
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Questions About Anatomic Shoulder Replacement?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to discuss whether this procedure is right for you
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

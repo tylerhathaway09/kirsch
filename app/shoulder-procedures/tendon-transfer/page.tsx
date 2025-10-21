@@ -2,20 +2,32 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "Lower Trapezius Tendon Transfer | Dr. Jacob Kirsch",
   description: "Information about lower trapezius tendon transfer, a joint-preserving surgical option for patients with massive, irreparable rotator cuff tears.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "candidates", title: "Who Is a Candidate?" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function TendonTransferPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">Tendon Transfer</h1>
       <p className="text-xl text-muted-foreground mb-8">(Lower Trapezius Tendon Transfer)</p>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Lower trapezius tendon transfer (LTT) has emerged as a promising surgical option for patients with massive, irreparable posterosuperior rotator cuff tears, particularly when the patient is younger, active, and not yet a good candidate for reverse shoulder arthroplasty (RSA). This advanced procedure is one of Dr. Kirsch&apos;s areas of specialized expertise.
@@ -27,7 +39,7 @@ export default function TendonTransferPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="candidates" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Who Is a Candidate?</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Patients may be better candidates for LTT over shoulder replacement if they:
@@ -53,7 +65,7 @@ export default function TendonTransferPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="procedure" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Lower trapezius tendon transfer involves both an open and arthroscopic approach to restore function in patients with massive, irreparable posterosuperior rotator cuff tears.
@@ -86,7 +98,7 @@ export default function TendonTransferPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Lower trapezius tendon transfer rehabilitation is a long recovery! On average, this process takes 4-6 months longer than rotator cuff repair, so it&apos;s important to not get discouraged. Slow and steady progress are key!
@@ -155,7 +167,7 @@ export default function TendonTransferPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -181,6 +193,7 @@ export default function TendonTransferPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -256,6 +269,10 @@ export default function TendonTransferPage() {
         <Button asChild size="lg">
           <Link href="/contact">Contact Us</Link>
         </Button>
+          </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

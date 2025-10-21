@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
 
@@ -9,22 +10,44 @@ export const metadata = {
   description: "Comprehensive guide to preparing for shoulder surgery with Dr. Kirsch, including pre-operative instructions, medications, home preparation, and what to expect on surgery day.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "pre-operative", title: "Pre-Operative Appointment" },
+  { id: "medications", title: "Medications to Stop" },
+  { id: "home-prep", title: "Preparing Your Home" },
+  { id: "clothing", title: "Clothing" },
+  { id: "cold-therapy", title: "Cold Therapy Machine" },
+  { id: "diet", title: "Diet" },
+  { id: "practice-sling", title: "Practice Using a Sling" },
+  { id: "day-before", title: "Day Before Surgery" },
+  { id: "night-before", title: "Night Before Surgery" },
+  { id: "nebh", title: "New England Baptist Hospital" },
+  { id: "what-to-pack", title: "What to Pack" },
+  { id: "what-to-bring", title: "What to Bring" },
+  { id: "boss", title: "Boston Outpatient Surgical Suites" },
+];
+
 export default function PreparingForSurgeryPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Preparing for Surgery</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Preparing for Surgery</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Preparing for surgery can seem like a big undertaking. We have put together information to help make this process less stressful and make you more prepared to help facilitate the smoothest recovery after surgery. If at any point, you have questions or concerns, do not hesitate to reach out to your team (Dr. Kirsch, Tessa or Michelle), as they are here to help you navigate this process.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                Preparing for surgery can seem like a big undertaking. We have put together information to help make this process less stressful and make you more prepared to help facilitate the smoothest recovery after surgery. If at any point, you have questions or concerns, do not hesitate to reach out to your team (Dr. Kirsch, Tessa or Michelle), as they are here to help you navigate this process.
+              </p>
+            </div>
+          </section>
 
-      <section className="space-y-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Pre-Operative Appointment</CardTitle>
-          </CardHeader>
+          <section id="pre-operative" className="scroll-mt-24 space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Pre-Operative Appointment</CardTitle>
+              </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
               You will need a pre-operative testing appointment at your primary care provider within 30 days of your surgery. Certain patients with more complicated medical issues may have to have a pre-operative appointment at the New England Baptist Hospital. It is essential that you make this appointment early in the 30-day window, as additional testing may be required, which may impact the timing of your surgery.
@@ -37,7 +60,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="medications" className="scroll-mt-24 space-y-8">
         <Card className="border-red-200 bg-red-50/50">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -85,7 +112,11 @@ export default function PreparingForSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="home-prep" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Preparing Your Home for After Surgery</CardTitle>
@@ -109,7 +140,11 @@ export default function PreparingForSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="clothing" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Clothing for After Surgery</CardTitle>
@@ -123,7 +158,11 @@ export default function PreparingForSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="cold-therapy" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Cold Therapy Machine</CardTitle>
@@ -134,7 +173,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="diet" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Diet</CardTitle>
@@ -190,7 +233,11 @@ export default function PreparingForSurgeryPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="practice-sling" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Practice Using a Sling</CardTitle>
@@ -201,7 +248,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="day-before" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>The Day Before Surgery</CardTitle>
@@ -215,7 +266,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="night-before" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>The Night Before Surgery</CardTitle>
@@ -243,7 +298,11 @@ export default function PreparingForSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="nebh" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Surgeries at New England Baptist Hospital</CardTitle>
@@ -257,7 +316,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="what-to-pack" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>What to Pack for an Overnight Stay</CardTitle>
@@ -268,7 +331,11 @@ export default function PreparingForSurgeryPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="what-to-bring" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>What to Bring to the Hospital</CardTitle>
@@ -284,7 +351,11 @@ export default function PreparingForSurgeryPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="boss" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Surgeries at Boston Outpatient Surgical Suites (BOSS)</CardTitle>
@@ -308,6 +379,11 @@ export default function PreparingForSurgeryPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

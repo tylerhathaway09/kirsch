@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,18 +9,29 @@ export const metadata = {
   description: "Common questions about shoulder care, surgery, and recovery answered by Dr. Kirsch.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "questions", title: "Common Questions" },
+];
+
 export default function FAQPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Frequently Asked Questions</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Find answers to common questions about shoulder conditions, treatments, and what to expect during your care with Dr. Kirsch.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                Find answers to common questions about shoulder conditions, treatments, and what to expect during your care with Dr. Kirsch.
+              </p>
+            </div>
+          </section>
 
-      <Accordion type="single" collapsible className="w-full space-y-4">
+          <section id="questions" className="scroll-mt-24">
+            <Accordion type="single" collapsible className="w-full space-y-4">
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-lg font-semibold">
             When should I see a shoulder specialist?
@@ -83,6 +95,7 @@ export default function FAQPage() {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+    </section>
 
       <Separator className="my-12" />
 
@@ -95,6 +108,11 @@ export default function FAQPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

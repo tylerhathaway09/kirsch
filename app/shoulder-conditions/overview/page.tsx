@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,18 +9,27 @@ export const metadata = {
   description: "Comprehensive overview of shoulder conditions treated by Dr. Kirsch, including rotator cuff tears, arthritis, instability, fractures, and more.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+];
+
 export default function ShoulderConditionsOverviewPage() {
   return (
-    <div className="container py-16 max-w-6xl">
-      <h1 className="text-4xl font-bold mb-8">Shoulder Conditions</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Shoulder Conditions</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Dr. Kirsch has a specialty practice focusing exclusively on treating all conditions of the shoulder. This ranges from non-operative management of strains and rotator cuff disorders to the complex surgical management of arthritis, shoulder instability, rotator cuff tears and revision surgery. The information here is designed to provide a helpful resource pertaining to some of the most common conditions that Dr. Kirsch takes care of.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                Dr. Kirsch has a specialty practice focusing exclusively on treating all conditions of the shoulder. This ranges from non-operative management of strains and rotator cuff disorders to the complex surgical management of arthritis, shoulder instability, rotator cuff tears and revision surgery. The information here is designed to provide a helpful resource pertaining to some of the most common conditions that Dr. Kirsch takes care of.
+              </p>
+            </div>
+          </section>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader>
             <CardTitle>Rotator Cuff Tears</CardTitle>
@@ -161,16 +171,21 @@ export default function ShoulderConditionsOverviewPage() {
         </Card>
       </div>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Have Questions About Your Shoulder Condition?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Have Questions About Your Shoulder Condition?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

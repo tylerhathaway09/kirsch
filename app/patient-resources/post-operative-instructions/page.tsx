@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 import { AlertCircle } from "lucide-react";
 
@@ -9,18 +10,36 @@ export const metadata = {
   description: "Comprehensive post-operative care instructions for shoulder surgery patients, including sling use, pain management, wound care, activity restrictions, and when to call the doctor.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "sling", title: "Sling Instructions" },
+  { id: "pain-management", title: "Pain Management" },
+  { id: "medications", title: "Pain Medications" },
+  { id: "constipation", title: "Managing Constipation" },
+  { id: "wound-care", title: "Wound Care" },
+  { id: "ice-therapy", title: "Ice Therapy" },
+  { id: "sleeping", title: "Sleeping Position" },
+  { id: "activity", title: "Activity Restrictions" },
+  { id: "when-to-call", title: "When to Call the Doctor" },
+];
+
 export default function PostOperativeInstructionsPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Post-Operative Instructions</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Post-Operative Instructions</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          There are several important aspects of post-operative care that will help facilitate the smoothest recovery process. At any point, please do not hesitate to reach out to Dr. Kirsch or your care team if you have any questions.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                There are several important aspects of post-operative care that will help facilitate the smoothest recovery process. At any point, please do not hesitate to reach out to Dr. Kirsch or your care team if you have any questions.
+              </p>
+            </div>
+          </section>
 
-      <section className="space-y-8">
+          <section id="sling" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Sling Instructions</CardTitle>
@@ -42,7 +61,11 @@ export default function PostOperativeInstructionsPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="pain-management" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Pain Management</CardTitle>
@@ -56,7 +79,11 @@ export default function PostOperativeInstructionsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="medications" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Post-Operative Pain Medications</CardTitle>
@@ -108,7 +135,11 @@ export default function PostOperativeInstructionsPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="constipation" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Managing Constipation</CardTitle>
@@ -125,7 +156,11 @@ export default function PostOperativeInstructionsPage() {
             </ul>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="wound-care" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Wound Care</CardTitle>
@@ -142,7 +177,11 @@ export default function PostOperativeInstructionsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="ice-therapy" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Ice Therapy</CardTitle>
@@ -159,7 +198,11 @@ export default function PostOperativeInstructionsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="sleeping" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Sleeping Position</CardTitle>
@@ -173,7 +216,11 @@ export default function PostOperativeInstructionsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="activity" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Activity Restrictions</CardTitle>
@@ -203,7 +250,11 @@ export default function PostOperativeInstructionsPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="when-to-call" className="scroll-mt-24 space-y-8">
         <Card className="border-red-200 bg-red-50/50">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -243,6 +294,11 @@ export default function PostOperativeInstructionsPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

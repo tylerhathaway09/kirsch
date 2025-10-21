@@ -2,19 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "Biceps Tenodesis | Dr. Jacob Kirsch",
   description: "Information about biceps tenodesis surgery for treatment of biceps tendonitis and SLAP tears, providing reliable pain relief and improved function.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "indications", title: "When Is Biceps Tenodesis Needed?" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function BicepsTenodesisPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">Biceps Tenodesis</h1>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Biceps tenodesis is a surgical procedure that addresses problems with the long head of the biceps tendon (LHBT), particularly biceps tendonitis and SLAP (Superior Labrum Anterior to Posterior) tears. The procedure involves releasing the biceps tendon from the labrum at the top of the shoulder socket and reattaching it to the humerus (upper arm bone) in a more stable position.
@@ -26,7 +38,7 @@ export default function BicepsTenodesisPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="indications" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">When Is Biceps Tenodesis Needed?</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Biceps tenodesis may be recommended for:
@@ -50,7 +62,7 @@ export default function BicepsTenodesisPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="procedure" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Biceps tenodesis is typically performed arthroscopically through small incisions, though sometimes a small open incision may be used for the tendon reattachment portion.
@@ -82,7 +94,7 @@ export default function BicepsTenodesisPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from biceps tenodesis is generally faster than rotator cuff repair, though protection of the repair is still important.
@@ -144,7 +156,7 @@ export default function BicepsTenodesisPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -170,6 +182,7 @@ export default function BicepsTenodesisPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -245,6 +258,10 @@ export default function BicepsTenodesisPage() {
         <Button asChild size="lg">
           <Link href="/contact">Contact Us</Link>
         </Button>
+          </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

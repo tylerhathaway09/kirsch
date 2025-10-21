@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,26 +9,36 @@ export const metadata = {
   description: "Comprehensive information about rotator cuff tears, including causes, symptoms, diagnosis, and treatment options from leading shoulder specialist Dr. Jacob Kirsch.",
 };
 
+const sections = [
+  { id: "background", title: "Background" },
+  { id: "symptoms", title: "Symptoms" },
+  { id: "diagnosis", title: "Diagnosis" },
+  { id: "treatment", title: "Treatment Options" },
+];
+
 export default function RotatorCuffTearPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Rotator Cuff Tears</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Rotator Cuff Tears</h1>
 
-      <div className="prose prose-lg max-w-none space-y-8">
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Background</h2>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section id="background" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Background</h2>
           <p className="text-muted-foreground leading-relaxed">
             Injuries to the rotator cuff are one of the most common causes of shoulder pain. Approximately 85% of all rotator cuff tears result from chronic wear-and-tear or degeneration of the tendon, whereas 15% result from acute traumatic injuries. Rotator cuff issues fall on a spectrum of pathology ranging from strains and inflammation (tendonitis/bursitis) to partial tears and complete full-thickness tears.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             The rotator cuff consists of four separate muscle/tendon structures (Supraspinatus, Infraspinatus, Teres Minor, and Subscapularis), which stabilize the shoulder and allow for a wide range of shoulder movements. Each tendon of the rotator cuff attaches to a unique portion of the proximal humerus, which allows them to have specific functions, but also allows them to compensate for deficiencies elsewhere in the rotator cuff. Often, patients with rotator cuff injuries can have concomitant biceps injuries or tendonitis.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Symptoms</h2>
+            <section id="symptoms" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Symptoms</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Patients with rotator cuff issues frequently experience:
           </p>
@@ -43,24 +54,24 @@ export default function RotatorCuffTearPage() {
           <p className="text-muted-foreground leading-relaxed mt-4">
             <strong>Note:</strong> Pain going past the level of the elbow down to the hand is often not associated with a shoulder or rotator cuff injury.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Diagnosis</h2>
+            <section id="diagnosis" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Diagnosis</h2>
           <p className="text-muted-foreground leading-relaxed">
             Diagnosis of a rotator cuff injury starts with a proper history and physical examination. Patients who sustain acute traumatic rotator cuff injuries will often report pain and a &quot;pop or snap&quot; after falling or lifting something, followed by difficulty lifting their arm.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             Chronic or degenerative rotator cuff tears present with pain that is worse at night and with lifting the arm, often accompanied by decreased strength or reduced mobility. An MRI is used to confirm the diagnosis of a rotator cuff tear and also provides important information relating to the tendon and muscle quality, which may impact treatment options.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Treatment Options</h2>
+            <section id="treatment" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Treatment Options</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Treatment for a rotator cuff tear depends on a variety of factors including:
           </p>
@@ -93,12 +104,12 @@ export default function RotatorCuffTearPage() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+            </section>
+          </div>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <section className="space-y-6">
+          <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Related Information</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <Card>
@@ -129,18 +140,23 @@ export default function RotatorCuffTearPage() {
             </CardContent>
           </Card>
         </div>
-      </section>
+          </section>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Questions About Rotator Cuff Tears?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Questions About Rotator Cuff Tears?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

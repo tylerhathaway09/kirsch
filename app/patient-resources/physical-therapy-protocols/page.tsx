@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 import { Clock, Activity, TrendingUp, CheckCircle2 } from "lucide-react";
 
@@ -9,18 +10,34 @@ export const metadata = {
   description: "Comprehensive physical therapy protocols and rehabilitation guidelines for shoulder surgery recovery, including phases of recovery, timeline expectations, and return to activity guidelines.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "importance", title: "Importance of PT" },
+  { id: "when-starts", title: "When PT Starts" },
+  { id: "what-to-expect", title: "What to Expect" },
+  { id: "recovery-phases", title: "Recovery Phases" },
+  { id: "home-exercises", title: "Home Exercise Program" },
+  { id: "return-activity", title: "Return to Activity" },
+  { id: "long-term", title: "Long-Term Success" },
+];
+
 export default function PhysicalTherapyProtocolsPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Physical Therapy Protocols</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Physical Therapy Protocols</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          Physical therapy is a critical component of recovery after shoulder surgery. Understanding the phases of rehabilitation and what to expect during each stage will help you achieve the best possible outcome.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                Physical therapy is a critical component of recovery after shoulder surgery. Understanding the phases of rehabilitation and what to expect during each stage will help you achieve the best possible outcome.
+              </p>
+            </div>
+          </section>
 
-      <section className="space-y-8">
+          <section id="importance" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Importance of Physical Therapy in Recovery</CardTitle>
@@ -34,7 +51,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="when-starts" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>When Physical Therapy Starts</CardTitle>
@@ -53,7 +74,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="what-to-expect" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>What to Expect in Physical Therapy Sessions</CardTitle>
@@ -74,7 +99,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="recovery-phases" className="scroll-mt-24 space-y-8">
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="border-blue-200">
             <CardHeader>
@@ -159,7 +188,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </CardContent>
           </Card>
         </div>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="home-exercises" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Home Exercise Program</CardTitle>
@@ -179,7 +212,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </p>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="return-activity" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Return to Activity Guidelines</CardTitle>
@@ -214,7 +251,11 @@ export default function PhysicalTherapyProtocolsPage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="long-term" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>Long-Term Success</CardTitle>
@@ -248,6 +289,11 @@ export default function PhysicalTherapyProtocolsPage() {
           <Link href="/contact">Contact Us</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

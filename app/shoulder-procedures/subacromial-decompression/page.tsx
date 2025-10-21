@@ -2,19 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "Subacromial Decompression | Dr. Jacob Kirsch",
   description: "Information about subacromial decompression surgery for shoulder impingement and bursitis that has not responded to conservative treatment.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "indications", title: "When Is Surgery Needed?" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function SubacromialDecompressionPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">Subacromial Decompression</h1>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Subacromial decompression, also known as acromioplasty, is an arthroscopic surgical procedure designed to relieve shoulder pain caused by impingement syndrome and chronic subacromial bursitis. The procedure involves removing the inflamed bursa and shaving down bone spurs on the underside of the acromion that are compressing the rotator cuff tendons.
@@ -26,7 +38,7 @@ export default function SubacromialDecompressionPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="indications" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">When Is Surgery Needed?</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Subacromial decompression is typically recommended after conservative treatment has failed to provide adequate relief. Surgery may be appropriate if:
@@ -50,7 +62,7 @@ export default function SubacromialDecompressionPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="procedure" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Subacromial decompression is performed arthroscopically through small poke-hole incisions, allowing the surgeon to visualize and treat the problem areas with minimal tissue disruption.
@@ -83,7 +95,7 @@ export default function SubacromialDecompressionPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from subacromial decompression is generally faster than rotator cuff repair, as no tendon repair needs to heal. However, following the rehabilitation protocol is still important for optimal outcomes.
@@ -145,7 +157,7 @@ export default function SubacromialDecompressionPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -171,6 +183,7 @@ export default function SubacromialDecompressionPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -246,6 +259,10 @@ export default function SubacromialDecompressionPage() {
         <Button asChild size="lg">
           <Link href="/contact">Contact Us</Link>
         </Button>
+          </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

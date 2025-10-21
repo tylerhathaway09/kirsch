@@ -2,19 +2,30 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "Shoulder Stabilization Surgery | Dr. Jacob Kirsch",
   description: "Information about shoulder stabilization procedures including arthroscopic Bankart repair and open Latarjet surgery for recurrent shoulder dislocations.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "options", title: "Surgical Options" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function ShoulderStabilizationPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">Shoulder Stabilization</h1>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Shoulder stabilization surgery is performed to restore stability to shoulders that have experienced recurrent dislocations or subluxations. The procedure repairs damaged structures—typically the labrum and joint capsule—that normally keep the shoulder stable, preventing the humeral head from slipping out of the socket.
@@ -26,7 +37,7 @@ export default function ShoulderStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="options" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Surgical Options</h2>
 
           <div className="space-y-4">
@@ -69,7 +80,7 @@ export default function ShoulderStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from shoulder stabilization surgery requires careful protection of the repair while gradually restoring motion and strength.
@@ -131,7 +142,7 @@ export default function ShoulderStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -157,6 +168,7 @@ export default function ShoulderStabilizationPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -234,5 +246,10 @@ export default function ShoulderStabilizationPage() {
         </Button>
       </div>
     </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+  </div>
+  </div>
   );
 }

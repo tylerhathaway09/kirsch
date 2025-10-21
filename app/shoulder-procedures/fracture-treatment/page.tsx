@@ -2,19 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "Fracture Treatment | Dr. Jacob Kirsch",
   description: "Information about shoulder fracture treatment options ranging from conservative care to surgical fixation and shoulder replacement.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "types", title: "Types of Shoulder Fractures" },
+  { id: "treatment", title: "Treatment Options" },
+  { id: "recovery", title: "Recovery" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function FractureTreatmentPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">Fracture Treatment</h1>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             Shoulder fractures involve broken bones in the shoulder complex, most commonly affecting the proximal humerus (upper arm bone), clavicle (collarbone), or scapula (shoulder blade). Treatment depends on the type, location, and severity of the fracture, as well as the patient&apos;s age, activity level, and bone quality.
@@ -26,7 +38,7 @@ export default function FractureTreatmentPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="types" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Types of Shoulder Fractures</h2>
 
           <div className="space-y-4">
@@ -55,7 +67,7 @@ export default function FractureTreatmentPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="treatment" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Treatment Options</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Treatment is highly individualized based on multiple factors including fracture pattern, displacement, patient age, bone quality, and functional demands.
@@ -115,7 +127,7 @@ export default function FractureTreatmentPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery varies significantly based on the treatment method and fracture severity.
@@ -159,7 +171,7 @@ export default function FractureTreatmentPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -185,6 +197,7 @@ export default function FractureTreatmentPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -260,6 +273,10 @@ export default function FractureTreatmentPage() {
         <Button asChild size="lg">
           <Link href="/contact">Contact Us</Link>
         </Button>
+          </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

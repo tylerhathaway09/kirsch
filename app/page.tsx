@@ -16,7 +16,7 @@ export default function Home() {
       />
 
       {/* Main Content */}
-      <div className="container py-16 space-y-16">
+      <div className="container py-20 space-y-20">
         {/* About Preview Section */}
         <section className="grid md:grid-cols-2 gap-8 items-center">
           <div className="space-y-4">
@@ -42,7 +42,7 @@ export default function Home() {
         {/* Quick Links Cards */}
         <section>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-primary">
               <CardHeader>
                 <CardTitle>About Our Practice</CardTitle>
                 <CardDescription>
@@ -56,7 +56,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-primary">
               <CardHeader>
                 <CardTitle>Patient Resources</CardTitle>
                 <CardDescription>
@@ -70,7 +70,7 @@ export default function Home() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-primary">
               <CardHeader>
                 <CardTitle>Patient Education</CardTitle>
                 <CardDescription>
@@ -118,55 +118,64 @@ export default function Home() {
 
           <div className="grid md:grid-cols-3 gap-6">
             {/* Research Card 1 */}
-            <Card>
-              <div className="bg-muted h-48 rounded-t-lg flex items-center justify-center">
-                <p className="text-muted-foreground">Research Image</p>
+            <Card className="border-l-4 border-l-primary">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+                <div className="text-center px-6">
+                  <p className="text-4xl font-bold text-primary mb-2">75+</p>
+                  <p className="text-sm text-muted-foreground">Published Papers</p>
+                </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-lg">Lorem Ipsum Dolor Sit Amet</CardTitle>
+                <CardTitle className="text-lg">Shoulder Surgery Research</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+                  Dr. Kirsch has authored more than 75 peer-reviewed scientific papers on rotator cuff repair, shoulder replacement outcomes, and surgical techniques.
                 </p>
-                <Button asChild variant="link" className="p-0">
-                  <Link href="/research/research-philosophy">Read More →</Link>
+                <Button asChild variant="link" className="p-0 text-primary">
+                  <Link href="/research/dr-kirsch-research">View Publications →</Link>
                 </Button>
               </CardContent>
             </Card>
 
             {/* Research Card 2 */}
-            <Card>
-              <div className="bg-muted h-48 rounded-t-lg flex items-center justify-center">
-                <p className="text-muted-foreground">Research Image</p>
+            <Card className="border-l-4 border-l-primary">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+                <div className="text-center px-6">
+                  <p className="text-4xl font-bold text-primary mb-2">13+</p>
+                  <p className="text-sm text-muted-foreground">Textbook Contributions</p>
+                </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-lg">Consectetur Adipiscing Elit</CardTitle>
+                <CardTitle className="text-lg">Educational Contributions</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+                  Contributing author to more than 13 orthopedic textbooks, sharing expertise with the next generation of shoulder surgeons worldwide.
                 </p>
-                <Button asChild variant="link" className="p-0">
-                  <Link href="/research/dr-kirsch-research">Read More →</Link>
+                <Button asChild variant="link" className="p-0 text-primary">
+                  <Link href="/about/research-and-education">Learn More →</Link>
                 </Button>
               </CardContent>
             </Card>
 
             {/* Research Card 3 */}
-            <Card>
-              <div className="bg-muted h-48 rounded-t-lg flex items-center justify-center">
-                <p className="text-muted-foreground">Research Image</p>
+            <Card className="border-l-4 border-l-primary">
+              <div className="bg-gradient-to-br from-primary/5 to-primary/10 h-48 rounded-t-lg flex items-center justify-center">
+                <div className="text-center px-6">
+                  <p className="text-4xl font-bold text-primary mb-2">100%</p>
+                  <p className="text-sm text-muted-foreground">Evidence-Based</p>
+                </div>
               </div>
               <CardHeader>
-                <CardTitle className="text-lg">Duis Aute Irure Dolor</CardTitle>
+                <CardTitle className="text-lg">Research-Driven Care</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Our practice integrates the latest research findings to provide evidence-based treatments and collect patient-reported outcomes for continuous improvement.
                 </p>
-                <Button asChild variant="link" className="p-0">
-                  <Link href="/research/research-philosophy">Read More →</Link>
+                <Button asChild variant="link" className="p-0 text-primary">
+                  <Link href="/research/research-philosophy">Our Philosophy →</Link>
                 </Button>
               </CardContent>
             </Card>

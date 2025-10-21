@@ -17,10 +17,10 @@ export function Hero({
   backgroundImage = "/hero-bg.jpg"
 }: HeroProps) {
   return (
-    <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden bg-gradient-to-r from-slate-900 to-slate-700">
+    <section className="relative h-[500px] flex items-center justify-center text-center overflow-hidden bg-gradient-to-br from-[oklch(0.25_0.1_265)] to-[oklch(0.35_0.12_265)]">
       {/* Background Image - TODO: Add actual background image */}
       <div
-        className="absolute inset-0 bg-black/40"
+        className="absolute inset-0 bg-gradient-to-br from-[oklch(0.25_0.1_265)]/70 to-[oklch(0.35_0.12_265)]/70"
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: 'cover',
@@ -39,7 +39,7 @@ export function Hero({
           </p>
         )}
         {ctaText && ctaLink && (
-          <Button asChild size="lg" variant="secondary">
+          <Button asChild size="lg" className="bg-white text-primary hover:bg-white/90">
             <Link href={ctaLink}>{ctaText}</Link>
           </Button>
         )}

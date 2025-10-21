@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,26 +9,36 @@ export const metadata = {
   description: "Comprehensive information about shoulder arthritis, including causes, symptoms, diagnosis, and treatment options including shoulder replacement surgery.",
 };
 
+const sections = [
+  { id: "background", title: "Background" },
+  { id: "symptoms", title: "Symptoms" },
+  { id: "diagnosis", title: "Diagnosis" },
+  { id: "treatment", title: "Treatment Options" },
+];
+
 export default function ShoulderArthritisPage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Shoulder Arthritis</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Shoulder Arthritis</h1>
 
-      <div className="prose prose-lg max-w-none space-y-8">
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Background</h2>
+          <div className="prose prose-lg max-w-none space-y-8">
+            <section id="background" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Background</h2>
           <p className="text-muted-foreground leading-relaxed">
             Shoulder arthritis is a common condition which can lead to pain, stiffness, and limitations in function. Cartilage normally lines the outside of the humerus (ball) and glenoid (socket). Cartilage rubbing on cartilage is smoother than ice rubbing on ice. Furthermore, cartilage has no nerve endings, so it provides a very smooth, pain-free surface.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             When the cartilage wears down, the underlying bone is rough and has nerve endings, so when bone rubs on bone it can be very rough and painful. As a result of this, many patients develop pain and stiffness which limits their daily activity, sleep, and quality of life.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Symptoms</h2>
+            <section id="symptoms" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Symptoms</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             Patients with shoulder arthritis typically experience:
           </p>
@@ -43,24 +54,24 @@ export default function ShoulderArthritisPage() {
           <p className="text-muted-foreground leading-relaxed mt-4">
             When these symptoms persist, they can dramatically impact one&apos;s quality of life. It is not uncommon for patients to experience fluctuations in the severity of their symptoms over time.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Diagnosis</h2>
+            <section id="diagnosis" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Diagnosis</h2>
           <p className="text-muted-foreground leading-relaxed">
             Shoulder arthritis can be easily diagnosed with standard X-rays. An MRI is not necessary to diagnose shoulder arthritis and is often never needed for patients with shoulder arthritis.
           </p>
           <p className="text-muted-foreground leading-relaxed">
             A CT scan will be obtained prior to surgery to better evaluate the patient&apos;s arthritis and aid in pre-operative planning for shoulder replacement surgery.
           </p>
-        </section>
+            </section>
 
-        <Separator className="my-8" />
+            <Separator className="my-8" />
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-4">Treatment Options</h2>
+            <section id="treatment" className="scroll-mt-24">
+              <h2 className="text-3xl font-semibold mb-4">Treatment Options</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             There are a variety of treatment options for patients with symptomatic shoulder arthritis:
           </p>
@@ -101,12 +112,12 @@ export default function ShoulderArthritisPage() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
+            </section>
+          </div>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <section className="space-y-6">
+          <section className="space-y-6">
         <h2 className="text-2xl font-semibold">Related Information</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <Card>
@@ -137,18 +148,23 @@ export default function ShoulderArthritisPage() {
             </CardContent>
           </Card>
         </div>
-      </section>
+          </section>
 
-      <Separator className="my-12" />
+          <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Questions About Shoulder Arthritis?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Questions About Shoulder Arthritis?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to discuss your diagnosis and treatment options
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

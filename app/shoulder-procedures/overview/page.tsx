@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,19 +9,28 @@ export const metadata = {
   description: "Comprehensive overview of shoulder procedures performed by Dr. Kirsch, from arthroscopic repairs to complex shoulder replacements and revision surgeries.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+];
+
 export default function ShoulderProceduresOverviewPage() {
   return (
-    <div className="container py-16 max-w-6xl">
-      <h1 className="text-4xl font-bold mb-8">Shoulder Procedures</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">Shoulder Procedures</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
         <p className="leading-relaxed text-lg">
           The shoulder is a complex joint composed of the humerus (upper arm bone), scapula (shoulder blade), and clavicle (collarbone), with the glenohumeral joint being the primary articulation. Stability and movement are provided by both static structures (like the labrum, joint capsule, and ligaments) and dynamic structures, most notably the rotator cuff muscles (supraspinatus, infraspinatus, teres minor, and subscapularis) and the deltoid.
         </p>
         <p className="leading-relaxed text-lg">
           A variety of surgical procedures are available to address shoulder conditions, ranging from minimally invasive arthroscopic techniques to more extensive open surgeries. Arthroscopic procedures, performed through small incisions using a camera and specialized instruments, are commonly used to treat rotator cuff tears, labral injuries, biceps tendon pathology, and shoulder instability. Open procedures are typically reserved for more severe or complex cases, including shoulder arthroplasty (replacement), which may be anatomic or reverse depending on the integrity of the rotator cuff. Each surgical option is tailored to the patient&apos;s specific pathology, functional demands, and overall health, with the goal of relieving pain, restoring mobility, and improving quality of life.
         </p>
-      </div>
+            </div>
+          </section>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card className="hover:shadow-lg transition-shadow">
@@ -166,14 +176,19 @@ export default function ShoulderProceduresOverviewPage() {
 
       <Separator className="my-12" />
 
-      <div className="text-center space-y-4">
-        <h3 className="text-2xl font-semibold">Ready to Discuss Your Treatment Options?</h3>
-        <p className="text-muted-foreground">
-          Schedule a consultation with Dr. Kirsch to learn about the best surgical approach for your condition
-        </p>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us</Link>
-        </Button>
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-semibold">Ready to Discuss Your Treatment Options?</h3>
+            <p className="text-muted-foreground">
+              Schedule a consultation with Dr. Kirsch to learn about the best surgical approach for your condition
+            </p>
+            <Button asChild size="lg">
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );

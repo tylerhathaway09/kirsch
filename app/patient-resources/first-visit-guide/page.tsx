@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,22 +9,34 @@ export const metadata = {
   description: "What to expect during your first visit with Dr. Kirsch and how to prepare for your consultation.",
 };
 
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "before-visit", title: "Before Your Visit" },
+  { id: "during-visit", title: "During Your Visit" },
+  { id: "after-visit", title: "After Your Visit" },
+];
+
 export default function FirstVisitGuidePage() {
   return (
-    <div className="container py-16 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">First Visit Guide</h1>
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
+          <h1 className="text-4xl font-bold mb-8">First Visit Guide</h1>
 
-      <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
-        <p className="leading-relaxed text-lg">
-          We want your first visit to be informative and comfortable. This guide will help you prepare for your consultation with Dr. Kirsch and understand what to expect.
-        </p>
-      </div>
+          <section id="overview" className="scroll-mt-24">
+            <div className="prose prose-lg max-w-none space-y-6 text-muted-foreground mb-12">
+              <p className="leading-relaxed text-lg">
+                We want your first visit to be informative and comfortable. This guide will help you prepare for your consultation with Dr. Kirsch and understand what to expect.
+              </p>
+            </div>
+          </section>
 
-      <section className="space-y-8">
-        <Card>
-          <CardHeader>
-            <CardTitle>Before Your Visit</CardTitle>
-          </CardHeader>
+          <section id="before-visit" className="scroll-mt-24 space-y-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Before Your Visit</CardTitle>
+              </CardHeader>
           <CardContent className="space-y-4">
             <div>
               <h3 className="font-semibold mb-2">What to Bring:</h3>
@@ -56,7 +69,11 @@ export default function FirstVisitGuidePage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="during-visit" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>During Your Visit</CardTitle>
@@ -91,7 +108,11 @@ export default function FirstVisitGuidePage() {
             </div>
           </CardContent>
         </Card>
+      </section>
 
+      <Separator className="my-12" />
+
+      <section id="after-visit" className="scroll-mt-24 space-y-8">
         <Card>
           <CardHeader>
             <CardTitle>After Your Visit</CardTitle>
@@ -115,6 +136,11 @@ export default function FirstVisitGuidePage() {
           <Link href="/contact">Schedule Appointment</Link>
         </Button>
       </div>
+    </div>
+
+    {/* Table of Contents Sidebar */}
+    <TableOfContents sections={sections} />
+    </div>
     </div>
   );
 }

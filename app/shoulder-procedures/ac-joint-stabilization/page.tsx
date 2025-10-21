@@ -2,19 +2,31 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { TableOfContents } from "@/components/layout/TableOfContents";
 
 export const metadata = {
   title: "AC Joint Stabilization | Dr. Jacob Kirsch",
   description: "Information about AC joint stabilization surgery for high-grade AC joint separations that fail conservative treatment or cause persistent symptoms.",
 };
+const sections = [
+  { id: "overview", title: "Overview" },
+  { id: "indications", title: "When Is Surgery Needed?" },
+  { id: "procedure", title: "The Surgical Procedure" },
+  { id: "recovery", title: "Recovery Timeline" },
+  { id: "expectations", title: "What to Expect" },
+];
+
 
 export default function ACJointStabilizationPage() {
   return (
-    <div className="container py-16 max-w-4xl">
+    <div className="container py-20 max-w-7xl">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_250px] gap-12">
+        {/* Main Content */}
+        <div>
       <h1 className="text-4xl font-bold mb-8">AC Joint Stabilization</h1>
 
       <div className="prose prose-lg max-w-none space-y-8">
-        <section>
+        <section id="overview" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Overview</h2>
           <p className="text-muted-foreground leading-relaxed">
             AC joint stabilization is a surgical procedure to repair damaged ligaments of the acromioclavicular (AC) joint, which connects the acromion (part of the shoulder blade) to the clavicle (collarbone). The procedure uses ligament reconstruction with graft and heavy suture to restore stability to the AC joint.
@@ -26,7 +38,7 @@ export default function ACJointStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="indications" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">When Is Surgery Needed?</h2>
           <p className="text-muted-foreground leading-relaxed mb-4">
             AC joint stabilization may be recommended for:
@@ -52,7 +64,7 @@ export default function ACJointStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="procedure" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">The Surgical Procedure</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             AC joint stabilization reconstructs the damaged ligaments to restore normal joint alignment and stability.
@@ -86,7 +98,7 @@ export default function ACJointStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="recovery" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">Recovery Timeline</h2>
           <p className="text-muted-foreground leading-relaxed mb-6">
             Recovery from AC joint stabilization requires careful protection of the reconstruction while gradually restoring motion and strength.
@@ -149,7 +161,7 @@ export default function ACJointStabilizationPage() {
 
         <Separator className="my-8" />
 
-        <section>
+        <section id="expectations" className="scroll-mt-24">
           <h2 className="text-3xl font-semibold mb-4">What to Expect</h2>
 
           <div className="space-y-4">
@@ -175,6 +187,7 @@ export default function ACJointStabilizationPage() {
             </div>
           </div>
         </section>
+      </div>
       </div>
 
       <Separator className="my-12" />
@@ -250,6 +263,10 @@ export default function ACJointStabilizationPage() {
         <Button asChild size="lg">
           <Link href="/contact">Contact Us</Link>
         </Button>
+          </div>
+
+        {/* Table of Contents Sidebar */}
+        <TableOfContents sections={sections} />
       </div>
     </div>
   );
