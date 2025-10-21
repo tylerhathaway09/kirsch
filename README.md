@@ -113,11 +113,18 @@ npm start
 - **SEO Optimized**: Every page has unique metadata
 - **Build Status**: All pages successfully generating as static content
 
-## 🎨 Customization
+## 🎨 Design System
 
-### Custom Brand Colors
+### Brand Colors
 
-The site uses default colors. To apply your brand colors:
+The site uses a professional medical blue color scheme (#094BCC):
+
+- **Primary Color**: oklch(0.42 0.18 257.42) - Professional medical blue
+- **Typography**: Merriweather serif for headings, Geist Sans for body
+- **Layout**: Two-column grid with side navigation on 38 content pages
+- **Spacing**: Generous vertical spacing (py-20) for clean, professional look
+
+To customize colors further:
 
 1. Open `app/globals.css`
 2. Find the "CUSTOM BRAND COLORS" comment
@@ -210,7 +217,19 @@ All content has been sourced from:
 - "New Website Content.docx"
 - "Kirsch copy update 091025.docx"
 
-### Recent Updates (2025-10-20)
+### Recent Updates
+
+#### Design Overhaul (2025-10-21)
+- **Complete UX/design transformation** inspired by michaelfumd.com
+- **New color system**: Professional medical blue (#094BCC) with refined oklch color palette
+- **Typography upgrade**: Merriweather serif headings for professional medical aesthetic
+- **Side navigation**: Added TableOfContents component to 38 content pages with scroll spy
+- **Layout improvements**: Two-column grid on large screens, responsive single column on mobile
+- **Enhanced spacing**: Increased vertical spacing (py-20) throughout for modern, clean look
+- **Component refinements**: Updated Hero, Card, Button, and Separator styling
+- **Build verification**: All 44 pages building successfully, dev server running without errors
+
+#### Content Updates (2025-10-20)
 - Fixed build errors and navigation issues
 - Updated 8 pages with revised copy per September 2025 update
 - Removed all lorem ipsum placeholder text
